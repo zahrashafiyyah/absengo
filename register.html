@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - AbsenGo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #42b3f5;
+            text-align: center;
+            padding: 50px;
+        }
+        .form-container {
+            display: inline-block;
+            text-align: left;
+            background: #fff;
+            padding: 30px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            width: 400px;
+        }
+        h2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        h2 img {
+            width: 50px;
+            height: 50px;
+        }
+        label {
+            font-size: 16px; 
+            margin-bottom: 5px;
+            display: block;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 12px; 
+            font-size: 14px; 
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+        }
+        button {
+            width: 100%;
+            padding: 14px; 
+            font-size: 16px; 
+            background-color: #62d9f0;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #1800f0;
+        }
+        .link {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .link a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        .link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>
+            <img src="gambar/absensi1.png" alt="Icon Absensi">
+            AbsenGo
+        </h2>
+        <form action="database/register.php" method="POST">
+            <label for="nama_lengkap">Nama Lengkap</label>
+            <input type="text" id="nama_lengkap" name="nama_lengkap" required>
+            <label for="nis">NIS</label>
+            <input type="text" id="nis" name="nis" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit" onclick="window.location.href='login.html';">Register</button>
+        </form>
+        <div class="link">
+            <p>Sudah punya akun? <a href="login.html">Login</a></p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - AbsenGo</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #42b3f5; 
+        }
+
+        .dashboard {
+            width: 100%;
+            max-width: 900px;
+            margin: 30px auto;
+            background: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header img.profile-icon {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            border: 3px solid #42b3f5;
+        }
+
+        header h2 {
+            color: #333;
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        header p {
+            color: #777;
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        main .menu {
+            display: grid;
+            grid-template-rows: auto auto;
+            gap: 30px;
+        }
+
+        .menu-top,
+        .menu-bottom {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .menu a {
+            text-align: center;
+            text-decoration: none;
+            width: 140px; /* Memberikan ukuran konsisten */
+        }
+
+        .menu img {
+            width: 120px;
+            height: 120px;
+            border-radius: 15px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .menu img:active {
+            transform: scale(0.95);
+        }
+
+        .menu p {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #333;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .menu p:hover {
+            color: #0073e6;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <img src="gambar/user.png" alt="User Icon" class="profile-icon">
+            <h2>Selamat Datang</h2>
+            <p>Nama Murid</p>
+        </header>
+        <main>
+            <div class="menu">
+                <div class="menu-top">
+                    <a href="absensi.html">
+                        <img src="gambar/absensi1.png" alt="Absensi">
+                        <p>Form Absensi</p>
+                    </a>
+                    <a href="form-absensi.html">
+                        <img src="gambar/murid.png" alt="Murid">
+                        <p>Murid Mengisi Form Absensi</p>
+                    </a>
+                </div>
+
+                <div class="menu-bottom">
+                    <a href="database/laporan_absen.php">
+                        <img src="gambar/laporanabsensi.png" alt="Laporan Absen">
+                        <p>Laporan Absensi dari Kelas</p>
+                    </a>
+                    <a href="admin.html">
+                        <img src="gambar/admin.png" alt="Admin">
+                        <p>Admin untuk Mengelola Absensi</p>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
