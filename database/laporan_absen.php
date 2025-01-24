@@ -11,6 +11,15 @@ $conn = new mysqli($host, $user, $password, $database);
 if ($conn->connect_error) {
     die("Koneksi gagal: " . $conn->connect_error);
 }
+if (isset($_GET['reset'])) {
+    // Hapus semua data
+    $delete_sql = "TRUNCATE TABLE absensi2";
+    if ($conn->query($delete_sql) === TRUE) {
+        echo "<script>alert('Data berhasil dihapus!');</script>";
+    } else {
+        echo "Gagal menghapus data: " . $conn->error;
+    }
+}
 
 // Ambil data dari tabel absensi2
 $sql = "SELECT * FROM absensi2"; // Ganti dengan nama tabel yang benar
@@ -99,6 +108,10 @@ $result = $conn->query($sql);
             ?>
         </tbody>
     </table>
+         <form method="get" action="">
+        <button class="reset-button" type="submit" name="reset">Reset Data Absensi</button>
+    </form>
+</section>
 </body>
 </html>
 
